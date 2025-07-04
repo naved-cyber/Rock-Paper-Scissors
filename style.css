@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #8DBCC7;
+
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4DA8DA;
+    height: 80px;
+    
+}
+h1{
+    font-size: 350%;
+    color: #333446;
+}
+.choices{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    height: 220px;
+    
+
+}
+.choice{
+    width: 220px;
+    height: 220px;
+    margin-top: 40px;
+    transition-duration: 0.5s;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+img{
+    
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
+
+.score-board{
+    display: flex;
+}
+
+.choice:hover{
+    transform: scale(1.05);
+    z-index: 1;
+    cursor: pointer;
+    background-color: #1B3C53;
+}
+
+.scores-board{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16rem;
+    margin-top: 25px;
+}
+.score{
+    font-size:50px;
+    height: 140px;
+    width: 140px;
+}
+.comp-score{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.comp{
+     display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.user-score{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.user{
+     display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.msg-container{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.msg{
+    padding: 1rem;
+    background-color: #131D4F;
+    font-size: 2rem;
+    color: white;
+   border-radius : 1rem;
+    display: inline;
+}
+
+
+.reset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgb(23, 23, 23);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     margin-top: 10pxpx;
+}
+.reset:hover{
+     transform: scale(1.04);
+     z-index: 1;
+    cursor: pointer;
+}
