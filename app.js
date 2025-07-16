@@ -1,12 +1,11 @@
 let userscore=0;
 let compscore=0;
-//functions
+//functions define
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector(".msg");
 const scoreyou=document.querySelector(".user-score");
 const scorecomp=document.querySelector(".comp-score");
 const reset=document.querySelector(".reset");
-
 
 let zero=()=>{
    scoreyou.innerText = "0";
@@ -24,14 +23,12 @@ reset.addEventListener("click",()=>{
     
 })
 
+
 const gencompchoice = ()=>{
-    const options =["rock","paper","scissors"];
+    const options =["rock","paper","scissor"];
     const randomno = Math.floor(Math.random() *3);
     return options[randomno];
 }
- 
- 
- 
 
 const countyou=()=>{
     
@@ -42,20 +39,26 @@ const countyou=()=>{
 
 const drawgame=()=>{
     console.log("game was draw");
+    msg.style.backgroundColor="black"
+    msg.style.Color="white"
+    msg.innerText="Game Draw - Play again"
 }
 const showwinner=(userwin,userchoice,compchoice)=>{
   if(userwin){
     console.log(`Congratulation - You Win ${userchoice} beats ${compchoice}`)
+    console.log("userwin is",userwin);
     msg.innerText=`Congratulation - You Win ( your ${userchoice} beats ${compchoice})`
+
     msg.style.backgroundColor="green"
     userscore++;
     scoreyou.innerText=userscore;
-  
+    
     
   }
   else{
     console.log(`you lose - sad ${compchoice} beats ${userchoice}`)
     msg.innerText=`you lose - sad (${compchoice} beats your ${userchoice})`
+    console.log("userwin is",userwin)
     msg.style.backgroundColor="red"
     compscore++;
     scorecomp.innerText=compscore;
@@ -70,27 +73,26 @@ const showwinner=(userwin,userchoice,compchoice)=>{
   if(userchoice === compchoice){
     //draw condition
     drawgame();
-    msg.style.backgroundColor="black"
-    msg.style.Color="white"
-    msg.innerText="Game Draw - Play again"
+    
     
   
   }
     else{
      let userwin = true;
-     if(userchoice===rock){
+     if(userchoice==="rock"){
         //scissor and paper
-      userwin=compchoice==="scissors"? true : false;
+      userwin=compchoice==="paper" ? false : true;
+      
      }
-     else if(userchoice===paper){
+     else if(userchoice==="paper"){
         //scissor and rock
-        userwin=compchoice==="scissors"? false : true;
+        userwin=compchoice==="rock" ? true : false;
 
      }
      else {
         //scissor and rock
-        userwin=compchoice==="rock"? false : true;
-
+        userwin=compchoice==="rock" ? false : true;
+      
     }
     showwinner(userwin,userchoice,compchoice);
 }
