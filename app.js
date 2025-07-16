@@ -47,7 +47,7 @@ const showwinner=(userwin,userchoice,compchoice)=>{
   if(userwin){
     console.log(`Congratulation - You Win ${userchoice} beats ${compchoice}`)
     console.log("userwin is",userwin);
-    msg.innerText=`Congratulation - You Win ( your ${userchoice} beats ${compchoice})`
+    msg.innerText=`Congratulation - You Win ( your-${userchoice} beats computer-${compchoice})`
 
     msg.style.backgroundColor="green"
     userscore++;
@@ -57,7 +57,7 @@ const showwinner=(userwin,userchoice,compchoice)=>{
   }
   else{
     console.log(`you lose - sad ${compchoice} beats ${userchoice}`)
-    msg.innerText=`you lose - sad (${compchoice} beats your ${userchoice})`
+    msg.innerText=`you lose - sad computer-(${compchoice} beats your-${userchoice})`
     console.log("userwin is",userwin)
     msg.style.backgroundColor="red"
     compscore++;
